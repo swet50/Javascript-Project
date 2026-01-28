@@ -1,0 +1,187 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eeaeca;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  text-align: center;
+}
+
+.wrapper {
+  background: #fff;
+  width: 90%;
+  max-width: 400px;
+  margin: 100px auto 0;
+  padding-bottom: 20px;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: large;
+  font-weight: bold;
+  margin: 5px 5px 5px 5px;
+  padding-top: 20px;
+}
+
+.question {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 20px;
+  color: #333;
+}
+
+.option {
+  background: #f5f7fb;
+  margin: 12px 20px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 15px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+/* hover effect */
+.option:hover {
+  background: #e0e7ff;
+  border-color: #6c63ff;
+}
+
+.option-select {
+  background-color: #e8bf08;
+}
+
+.correct {
+  background: #d1fae5;
+  border-color: #16a34a;
+}
+
+.wrong {
+  background: #fee2e2;
+  border-color: #dc2626;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: #cfef00;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+button:hover {
+  background: #c4e201;
+}
+
+button > svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover svg {
+  transform: translateX(5px);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.hidden {
+  display: none;
+}
+
+.result {
+  margin: 20px;
+}
+
+.result {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  width: 90%;
+  max-width: 350px;
+  padding: 30px 20px;
+  border-radius: 16px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+
+  text-align: center;
+}
+
+/* Heading */
+.result h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Score text */
+.score-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #2563eb;
+}
+
+/* Restart button */
+.restart-btn {
+  display: block;
+  margin: 0 auto;
+
+  background: #22c55e;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.restart-btn:hover {
+  background: #16a34a;
+  transform: scale(1.05);
+}
+
+.wrapper.hidden {
+  filter: blur(3px);
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 150px;
+}
+
+body.result-bg {
+  background: linear-gradient(135deg, #667eea, #764ba2) !important;
+}
